@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ----------- BODY ----------- */
+body {
+  max-width: 1000px;
+  width: 100vw;
+  height: 100vh;
+  background: #e5e5e5;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(44, 68px);
+  /* grid-auto-rows: 68px; */
+
+  margin: 0 auto;
+  font-family: "Frank Ruhl Libre", sans-serif;
+}
+
+h1 {
+  font-size: 2.8125rem;
+  font-weight: 800;
+  letter-spacing: -2%;
+  margin-bottom: 0px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0;
+}
+
+p {
+  font-family: "Fira Sans", sans-serif;
+  margin-bottom: 1rem;
+  color: rgb(0 0 0 / 0.6);
+}
+
+.white {
+  color: rgb(255, 255, 255);
+}
+
+.join-button {
+  border: none;
+  padding: 0.9rem 2.8rem;
+  font-size: 0.6rem;
+  line-height: 0.7rem;
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 6.25rem;
+}
+
+.bold {
+  opacity: 1;
+}
+
+/* ----------- HEADER ----------- */
+header {
+  /* background: red; */
+  grid-row: auto / span 9;
+  grid-column: auto / span 6;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+.header-left {
+  background: #c7ddea;
+  grid-row: auto / span 8;
+  grid-column: auto / span 3;
+  padding: 1rem 6.5625rem;
+  position: relative;
+}
+
+.header-right {
+  grid-row: auto / span 8;
+  grid-column: auto / span 3;
+}
+
+.header-right__up {
+  background: #f17949;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-right__down {
+  background: #ffb939;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-left__p {
+  line-height: 24px;
+  font-size: 0.875rem;
+  max-width: 16.65rem;
+  font-weight: 500;
+  margin-bottom: 3.1875rem;
+}
+
+.header-right__p {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: -2%;
+}
+
+.header-left__img {
+  width: 17.875rem;
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+}
+
+/* ----------- NAV ----------- */
+nav {
+  grid-row: auto / span 1;
+  grid-column: 2 / 6;
+}
+
+nav ul li {
+  width: 25%;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  padding-left: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.4;
+  font-weight: 500;
+  font-size: 0.75rem;
+  font-family: "Fira Sans";
+  text-align: center;
+}
+
+nav ul li a:visited {
+  color: black;
+  opacity: 0.4;
+}
+
+/* ----------- MAIN ----------- */
+main {
+  grid-row: auto / span 30;
+  grid-column: auto / span 6;
+  display: flex;
+  flex-flow: column nowrap;
+  /* grid-template-columns: repeat(4, 1fr); */
+  width: 100%;
+}
+
+.main__box1 {
+  width: 100%;
+  height: 38.25rem;
+  background: #a9a19e;
+  /* grid-row: auto / span 6; */
+  /* grid-column: auto / span 6; */
+  display: flex;
+  max-height: 160.875rem;
+  padding: 6.5625rem;
+}
+
+.main__box2 {
+  width: 100%;
+  height: 42.5rem;
+  background: #fab131;
+  /* grid-row: auto / span 5; */
+  /* grid-column: auto / span 6; */
+  /* padding: 6.5625rem; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__box3 {
+  width: 100%;
+  background: #ffffff;
+  /* grid-row: auto / span 10; */
+  /* grid-column: auto / span 6; */
+}
+
+.main__box4 {
+  background: #a9a19e;
+  /* grid-row: auto / span 1; */
+  /* grid-column: auto / span 6; */
+  width: 100%;
+}
+
+.main__box5 {
+    width: 1002px;
+    height: 19.25rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 1.7rem;
+    top: 66.25rem;
+}
+
+.main__box1__left {
+  /* grid-column: 1 / 3; */
+  grid-column: auto / span 3;
+  grid-row: auto / span 6;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 50%;
+  /* padding: 6.5625rem 6.5625rem; */
+}
+
+.main__box1__right {
+  /* grid-column: 3 / -1; */
+  grid-column: auto / span 3;
+  grid-row: auto / span 6;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 50%;
+}
+
+.card {
+    background-color: #fff;
+    width: 16rem;
+    height: 19.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    border-radius: 0.3125rem;
+    padding: 2rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card__image {
+  width: 90%;
+  height: 4rem;
+  background-size: cover;
+  background-position-y: top;
+  padding: 5rem;
+  position: absolute;
+  top: -1.5rem;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  border-radius: 0.25rem;
+}
+
+.card__child {
+  background-image: url("../img/child.png");
+  background-color: #C7DDEA;
+  background-size: 40%;
+  background-position-y: 0.81rem;
+}
+
+.card__adult {
+  background-image: url("../img/adult.png");
+  background-color: #FAB131;
+  background-size: 45%;
+  background-position-y: 0.9rem;
+}
+
+.card__old {
+  background-image: url("../img/old.png");
+  background-color: #F17949;
+  background-size: 60%;
+  background-position-y: 1.8rem;
+}
+
+.main__h1 {
+  color: #fff;
+  /* width: 19.625rem; */
+  width: 23.6rem;
+  height: 8.75rem;
+  line-height: 2.8125rem;
+  font-size: 2.8125rem;
+  margin: 0;
+  letter-spacing: -2%;
+  margin-bottom: 3.625rem;
+}
+
+.box2--h1 {
+  text-align: center;
+  margin: 0;
+  padding-top: 3.6rem;
+}
+
+.main__p {
+  width: 18rem;
+  margin: 0;
+  font-family: "Fira Sans";
+  margin-left: 5rem;
+  /* margin: 0 auto; */
+  font-size: 0.9rem;
+  /* font-size: 14px; */
+  line-height: 24px;
+  font-weight: 500;
+  
+}
+
+.box2--p {
+  width: 27.625rem;
+  margin: 0;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 0.25rem;
+}
+
+.card__p {
+    font-size: 0.6475rem;
+    /* margin-top: auto; */
+    line-height: 1.125rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    /* height: 6.75rem; */
+    color: rgb(0 0 0 / 0.4)
+}
+
+.card__h3 {
+    font-size: 1rem;
+    padding-top: 13rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.main__box1__left__button {
+  align-self: flex-start;
+}
+
+/* ----------- FOOTER ----------- */
+footer {
+  background: grey;
+  grid-row: auto / span 5;
+  grid-column: auto / span 6;
+}
