@@ -61,6 +61,18 @@ p {
   opacity: 1;
 }
 
+.lightblue {
+  background-color: #c7ddea;
+}
+
+.lightgrey {
+  background-color: #ebebeb;
+}
+
+.orange {
+  background-color: #f17949;
+}
+
 /* ----------- HEADER ----------- */
 header {
   /* background: red; */
@@ -198,26 +210,34 @@ main {
 
 .main__box3 {
   width: 100%;
+  height: 42.5rem;
   background: #ffffff;
-  /* grid-row: auto / span 10; */
-  /* grid-column: auto / span 6; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 21.25rem);
+  /* grid-auto-rows: 340px; */
 }
 
 .main__box4 {
-  background: #a9a19e;
+  background-color: #A9A19E;
   /* grid-row: auto / span 1; */
   /* grid-column: auto / span 6; */
   width: 100%;
+  height: 4.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .main__box5 {
-    width: 1002px;
-    height: 19.25rem;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    gap: 1.7rem;
-    top: 66.25rem;
+  width: 1002px;
+  height: 19.25rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 1.7rem;
+  top: 66.25rem;
 }
 
 .main__box1__left {
@@ -244,17 +264,18 @@ main {
 }
 
 .card {
-    background-color: #fff;
-    width: 16rem;
-    height: 19.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-    border-radius: 0.3125rem;
-    padding: 2rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 16rem;
+  height: 19.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  border-radius: 0.3125rem;
+  padding: 2rem;
+  padding-bottom: 3.6rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card__image {
@@ -262,7 +283,7 @@ main {
   height: 4rem;
   background-size: cover;
   background-position-y: top;
-  padding: 5rem;
+  padding: 4.6875rem;
   position: absolute;
   top: -1.5rem;
   background-repeat: no-repeat;
@@ -272,22 +293,22 @@ main {
 
 .card__child {
   background-image: url("../img/child.png");
-  background-color: #C7DDEA;
+  background-color: #c7ddea;
   background-size: 40%;
   background-position-y: 0.81rem;
 }
 
 .card__adult {
   background-image: url("../img/adult.png");
-  background-color: #FAB131;
-  background-size: 45%;
+  background-color: #fab131;
+  background-size: 42%;
   background-position-y: 0.9rem;
 }
 
 .card__old {
   background-image: url("../img/old.png");
-  background-color: #F17949;
-  background-size: 60%;
+  background-color: #f17949;
+  background-size: 55%;
   background-position-y: 1.8rem;
 }
 
@@ -319,7 +340,6 @@ main {
   /* font-size: 14px; */
   line-height: 24px;
   font-weight: 500;
-  
 }
 
 .box2--p {
@@ -331,30 +351,89 @@ main {
 }
 
 .card__p {
-    font-size: 0.6475rem;
-    /* margin-top: auto; */
-    line-height: 1.125rem;
-    text-align: center;
-    font-weight: 700;
-    margin-bottom: 5rem;
-    /* height: 6.75rem; */
-    color: rgb(0 0 0 / 0.4)
+  font-size: 0.6475rem;
+  /* margin-top: auto; */
+  line-height: 1.125rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 5rem;
+  /* height: 6.75rem; */
+  color: rgb(0 0 0 / 0.4);
 }
 
 .card__h3 {
-    font-size: 1rem;
-    padding-top: 13rem;
-    margin: 0;
-    font-weight: 700;
+  font-size: 1rem;
+  padding-top: 13rem;
+  margin: 0;
+  font-weight: 700;
 }
 
 .main__box1__left__button {
   align-self: flex-start;
 }
 
+.box3__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.box3__card aside {
+  height: 100px;
+  width: 100px;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: -0.02rem;
+  color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+}
+
+.box3__card h1 {
+  text-align: center;
+  margin: 0;
+  line-height: 100%;
+}
+
+.box3__card p {
+  font-family: 'Fira Sans';
+  text-align: center;
+  color:rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-size: 1.0625rem;
+  line-height: 20px;
+  margin: 0;
+  /* margin-bottom: 2rem; */
+}
+
+.main__box4 p {
+  font-family: 'Fira Sans';
+  text-align: center;
+  color:rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-size: 1.0625rem;
+  line-height: 20px;
+  margin: 0;
+}
+
+.main__box4 a {
+  text-decoration: none;
+}
+
+.main__box4 svg {
+  transform: scale(1.3);
+  position: absolute;
+  top: 5px;
+  left: 49%;
+}
+
 /* ----------- FOOTER ----------- */
 footer {
-  background: grey;
+  background: #777574;
   grid-row: auto / span 5;
   grid-column: auto / span 6;
 }
