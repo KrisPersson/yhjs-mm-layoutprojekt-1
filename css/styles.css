@@ -8,12 +8,10 @@ body {
   width: 100vw;
   height: 100vh;
   background: #e5e5e5;
-
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(44, 68px);
   /* grid-auto-rows: 68px; */
-
   margin: 0 auto;
   font-family: "Frank Ruhl Libre", sans-serif;
 }
@@ -73,7 +71,7 @@ p {
   background-color: #f17949;
 }
 
-/* ----------- HEADER ----------- */
+/* ----------- HEADER LANDING ----------- */
 header {
   /* background: red; */
   grid-row: auto / span 9;
@@ -138,6 +136,42 @@ header {
   right: 12px;
 }
 
+/* ----------- HEADER CONTACT ----------- */
+.header-contact {
+  grid-row: auto / span 5;
+  grid-column: auto / span 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-contact img {
+  position: absolute;
+  right: 7.2rem;
+  bottom: 0;
+}
+
+/* ----------- NAV CONTACT ----------- */
+.header-contact-nav {
+  /* width: 100%; */
+  height: 68px;
+  background: #fff;
+  grid-column: auto / span 6;
+}
+
+.header-contact-nav ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.header-contact-nav ul li {
+  width: 16.66666667%;
+}
+
 /* ----------- NAV ----------- */
 nav {
   grid-row: auto / span 1;
@@ -174,7 +208,7 @@ nav ul li a:visited {
   opacity: 0.4;
 }
 
-/* ----------- MAIN ----------- */
+/* ----------- MAIN LANDING ----------- */
 main {
   grid-row: auto / span 30;
   grid-column: auto / span 6;
@@ -219,7 +253,7 @@ main {
 }
 
 .main__box4 {
-  background-color: #A9A19E;
+  background-color: #a9a19e;
   /* grid-row: auto / span 1; */
   /* grid-column: auto / span 6; */
   width: 100%;
@@ -400,9 +434,9 @@ main {
 }
 
 .box3__card p {
-  font-family: 'Fira Sans';
+  font-family: "Fira Sans";
   text-align: center;
-  color:rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   font-weight: 500;
   font-size: 1.0625rem;
   line-height: 20px;
@@ -411,9 +445,9 @@ main {
 }
 
 .main__box4 p {
-  font-family: 'Fira Sans';
+  font-family: "Fira Sans";
   text-align: center;
-  color:rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   font-weight: 500;
   font-size: 1.0625rem;
   line-height: 20px;
@@ -422,6 +456,9 @@ main {
 
 .main__box4 a {
   text-decoration: none;
+  padding: 1.5rem;
+  z-index: 2;
+  width: 100%;
 }
 
 .main__box4 svg {
@@ -429,6 +466,135 @@ main {
   position: absolute;
   top: 5px;
   left: 49%;
+}
+
+/* ----------- MAIN CONTACT ----------- */
+.main-contact {
+  grid-row: 7 / span 14;
+  grid-column: auto / span 6;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.main__box1-contact {
+  width: 100%;
+  height: 34rem;
+  background: #a9a19e;
+  display: flex;
+  max-height: 160.875rem;
+  padding: 6.5625rem;
+}
+
+.main__box1-contact section {
+  width: 50%;
+}
+
+.email-box {
+  width: 334px;
+  height: 40px;
+  background: #fefefe;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  padding: 0 0.5rem;
+}
+
+.email-box__p {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  opacity: 0.7;
+  margin-bottom: 0.6rem;
+}
+
+.message-box {
+  width: 334px;
+  height: 166px;
+  background: #fefefe;
+  border-radius: 2px;
+  border: none;
+
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #000;
+
+  resize: none;
+  padding: 1rem;
+  outline: none;
+}
+
+.main-contact button {
+  margin: 2rem 3.8rem 0 auto;
+  padding: 0.9rem 2.1rem;
+}
+
+.main__box1-contact .main__h1 {
+  margin: 0;
+  margin-left: -2.35rem;
+  margin-top: 0.1rem;
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.main__box2-contact {
+  width: 100%;
+  height: 25.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-image: url("../img/map-contact.png");
+}
+
+.main__box2-contact article {
+  position: absolute;
+  background: #fab131;
+  padding: 1rem;
+  top: 2.8125rem;
+  left: 5.375rem;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  height: 206px;
+  width: 323px;
+}
+
+.main__box2-contact article h1,
+.main__box2-contact article p {
+  margin: 0;
+  color: white;
+}
+
+.main__box2-contact article p {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main__box2-contact img {
+  margin-top: 1.8rem;
+}
+
+textarea::placeholder {
+  color: #000;
+  opacity: 0.7;  
 }
 
 /* ----------- FOOTER ----------- */
