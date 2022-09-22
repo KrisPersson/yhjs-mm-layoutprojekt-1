@@ -20,32 +20,32 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header class="header-contact lightblue">
+    <header class="header-contact lightblue center column-6">
       <h1>Oh hello there!</h1>
       <img src="img/man-and-child.png" alt="man and a child" />
     </header>
-    <nav class="header-contact-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Our offer</a></li>
-        <li><a href="#">Why us</a></li>
-        <li><a class="bold" href="contact.html">Contact</a></li>
+    <nav class="header-contact-nav column-6">
+      <ul class="center">
+        <li class="center"><a href="index.html">Home</a></li>
+        <li class="center"><a href="#">Our offer</a></li>
+        <li class="center"><a href="#">Why us</a></li>
+        <li class="center"><a class="bold" href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <main class="main-contact">
+    <main class="main-contact column column-6">
         <section class="main__box1 main__box1-contact">
             <section>
                 <h1 class="main__h1"> Whats on your mind?</h1>
             </section>
-            <section>
+            <form>
                 <p class="email-box__p">Your email</p>
-                <input type="text" class="email-box">
+                <input type="email" class="email-box" required>
                 <p class="email-box__p">Your message</p>
-                <textarea class="message-box" placeholder="Dear Insurance company..."></textarea>
+                <textarea class="message-box" placeholder="Dear Insurance company..." required></textarea>
                 <button class="join-button">SEND MESSAGE</button>
-            </section>
+            </form>
         </section>
-        <section class="main__box2 main__box2-contact">
+        <section class="main__box2 main__box2-contact center column">
             <img src="img/needle.png" alt="Needle">
             <article>
                 <h1>Come visit us!</h1>
@@ -54,6 +54,6 @@
             
         </section>
       </main>
-      <footer></footer>
+      <footer class="column-6"></footer>
   </body>
 </html>

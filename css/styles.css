@@ -1,315 +1,258 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
-/* ----------- BODY ----------- */
 body {
   max-width: 1000px;
   width: 100vw;
   height: 100vh;
   background: #e5e5e5;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(44, 68px);
-  /* grid-auto-rows: 68px; */
+  grid-template-columns: repeat(6,1fr);
+  grid-auto-rows: 68px;
   margin: 0 auto;
-  font-family: "Frank Ruhl Libre", sans-serif;
+  font-family: "Frank Ruhl Libre",sans-serif
 }
 
 h1 {
   font-size: 2.8125rem;
   font-weight: 800;
-  letter-spacing: -2%;
-  margin-bottom: 0px;
+  margin-bottom: 0
 }
 
 h2 {
-  color: #fff;
   font-size: 2rem;
-  margin: 0;
+  margin: 0
 }
 
 p {
-  font-family: "Fira Sans", sans-serif;
   margin-bottom: 1rem;
-  color: rgb(0 0 0 / 0.6);
+  color: rgb(0 0 0/.6)
 }
 
-.white {
-  color: rgb(255, 255, 255);
+a,button,input,p,textarea {
+  font-family: "Fira Sans",sans-serif
+}
+
+.white,h2 {
+  color: #fff
+}
+
+button {
+  cursor: pointer
 }
 
 .join-button {
-  border: none;
-  padding: 0.9rem 2.8rem;
-  font-size: 0.6rem;
-  line-height: 0.7rem;
-  font-family: "Fira Sans";
-  font-style: normal;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background: #ffffff;
-  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+  border: 0;
+  padding: .9rem 2.8rem;
+  background: #fff;
+  box-shadow: 0 2px 0 rgba(0,0,0,.1);
   border-radius: 6.25rem;
+  font-size: .6rem;
+  line-height: .7rem;
+  font-weight: 500;
 }
 
 .bold {
   opacity: 1;
+  padding: 1.9rem;
+  cursor: default
 }
 
 .lightblue {
-  background-color: #c7ddea;
+  background-color: #c7ddea
 }
 
 .lightgrey {
-  background-color: #ebebeb;
+  background-color: #ebebeb
 }
 
 .orange {
-  background-color: #f17949;
+  background-color: #f17949
 }
 
-/* ----------- HEADER LANDING ----------- */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.column {
+  flex-direction: column
+}
+
+.column-3 {
+  grid-column: auto/span 3
+}
+
+.column-6 {
+  grid-column: auto/span 6
+}
+
+textarea::placeholder {
+  color: #000;
+  opacity: .7
+}
+
 header {
-  /* background: red; */
-  grid-row: auto / span 9;
-  grid-column: auto / span 6;
+  grid-row: auto/span 9;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(9,1fr)
 }
 
 .header-left {
   background: #c7ddea;
-  grid-row: auto / span 8;
-  grid-column: auto / span 3;
   padding: 1rem 6.5625rem;
-  position: relative;
+  position: relative
 }
 
-.header-right {
-  grid-row: auto / span 8;
-  grid-column: auto / span 3;
+.header-left,.header-right {
+  grid-row: auto/span 8
 }
 
 .header-right__up {
   background: #f17949;
-  height: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  height: 50%
 }
 
 .header-right__down {
   background: #ffb939;
-  height: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  height: 50%
 }
 
 .header-left__p {
   line-height: 24px;
-  font-size: 0.875rem;
+  font-size: .875rem;
   max-width: 16.65rem;
   font-weight: 500;
-  margin-bottom: 3.1875rem;
+  margin-bottom: 3.1875rem
 }
 
 .header-right__p {
   margin: 0;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: -2%;
+  font-size: .6875rem;
+  font-weight: 600
 }
 
-.header-left__img {
-  width: 17.875rem;
-  position: absolute;
-  bottom: 0;
-  right: 12px;
+.header-left {
+  background-image: url(../img/family.png);
+  background-repeat: no-repeat;
+  background-size: 58%;
+  background-position-x: 94%;
+  background-position-y: 100%
 }
 
-/* ----------- HEADER CONTACT ----------- */
 .header-contact {
-  grid-row: auto / span 5;
-  grid-column: auto / span 6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  grid-row: auto/span 5;
+  position: relative
 }
 
 .header-contact img {
   position: absolute;
   right: 7.2rem;
-  bottom: 0;
+  bottom: 0
 }
 
-/* ----------- NAV CONTACT ----------- */
 .header-contact-nav {
-  /* width: 100%; */
   height: 68px;
-  background: #fff;
-  grid-column: auto / span 6;
+  background: #fff
 }
 
 .header-contact-nav ul {
-  display: flex;
-  justify-content: center;
   width: 100%;
   margin: 0;
-  text-align: center;
+  text-align: center
 }
 
-.header-contact-nav ul li {
+.header-contact-nav ul li,nav ul li {
   width: 16.66666667%;
+  height: 100%
 }
 
-/* ----------- NAV ----------- */
+.header-contact-nav li a {
+  padding: 1.6875rem
+}
+
 nav {
-  grid-row: auto / span 1;
-  grid-column: 2 / 6;
+  grid-row: auto/span 1;
+  grid-column: 2/6;
+  max-height: 68px
 }
 
 nav ul li {
   width: 25%;
-  text-align: center;
+  text-align: center
 }
 
 nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
   height: 100%;
   margin: 0;
-  padding-left: 0;
+  padding-left: 0
 }
 
 nav ul li a {
   text-decoration: none;
-  color: black;
-  opacity: 0.4;
   font-weight: 500;
-  font-size: 0.75rem;
-  font-family: "Fira Sans";
+  font-size: .75rem;
   text-align: center;
+  padding: 27px
 }
 
-nav ul li a:visited {
-  color: black;
-  opacity: 0.4;
+nav ul li a,nav ul li a:visited {
+  color: #000;
+  opacity: .4
 }
 
-/* ----------- MAIN LANDING ----------- */
 main {
-  grid-row: auto / span 30;
-  grid-column: auto / span 6;
-  display: flex;
-  flex-flow: column nowrap;
-  /* grid-template-columns: repeat(4, 1fr); */
-  width: 100%;
+  grid-row: auto/span 30
 }
 
 .main__box1 {
-  width: 100%;
   height: 38.25rem;
   background: #a9a19e;
-  /* grid-row: auto / span 6; */
-  /* grid-column: auto / span 6; */
-  display: flex;
-  max-height: 160.875rem;
   padding: 6.5625rem;
+  display: flex
 }
 
 .main__box2 {
-  width: 100%;
   height: 42.5rem;
-  background: #fab131;
-  /* grid-row: auto / span 5; */
-  /* grid-column: auto / span 6; */
-  /* padding: 6.5625rem; */
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  background: #fab131
 }
 
 .main__box3 {
-  width: 100%;
-  height: 42.5rem;
-  background: #ffffff;
+  background: #fff;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 21.25rem);
-  /* grid-auto-rows: 340px; */
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,21.25rem)
 }
 
 .main__box4 {
   background-color: #a9a19e;
-  /* grid-row: auto / span 1; */
-  /* grid-column: auto / span 6; */
-  width: 100%;
-  height: 4.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  position: relative
 }
 
 .main__box5 {
   width: 1002px;
-  height: 19.25rem;
   position: absolute;
-  display: flex;
-  justify-content: center;
   gap: 1.7rem;
-  top: 66.25rem;
+  top: 66.25rem
 }
 
-.main__box1__left {
-  /* grid-column: 1 / 3; */
-  grid-column: auto / span 3;
-  grid-row: auto / span 6;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  width: 50%;
-  /* padding: 6.5625rem 6.5625rem; */
-}
-
-.main__box1__right {
-  /* grid-column: 3 / -1; */
-  grid-column: auto / span 3;
-  grid-row: auto / span 6;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  width: 50%;
+.main__box1__left,.main__box1__right {
+  justify-content: flex-start;
+  width: 50%
 }
 
 .card {
   background-color: #fff;
   width: 16rem;
   height: 19.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-around;
   position: relative;
-  border-radius: 0.3125rem;
-  padding: 2rem;
-  padding-bottom: 3.6rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: .3125rem;
+  padding: 2rem 2rem 3.6rem;
+  box-shadow: 0 4px 4px rgba(0,0,0,.1)
 }
 
 .card__image {
@@ -322,159 +265,126 @@ main {
   top: -1.5rem;
   background-repeat: no-repeat;
   background-position: center bottom;
-  border-radius: 0.25rem;
+  border-radius: .25rem
 }
 
 .card__child {
-  background-image: url("../img/child.png");
+  background-image: url(../img/child.png);
   background-color: #c7ddea;
   background-size: 40%;
-  background-position-y: 0.81rem;
+  background-position-y: .81rem
 }
 
 .card__adult {
-  background-image: url("../img/adult.png");
+  background-image: url(../img/adult.png);
   background-color: #fab131;
   background-size: 42%;
-  background-position-y: 0.9rem;
+  background-position-y: .9rem
 }
 
 .card__old {
-  background-image: url("../img/old.png");
+  background-image: url(../img/old.png);
   background-color: #f17949;
   background-size: 55%;
-  background-position-y: 1.8rem;
+  background-position-y: 1.8rem
 }
 
 .main__h1 {
   color: #fff;
-  /* width: 19.625rem; */
   width: 23.6rem;
   height: 8.75rem;
   line-height: 2.8125rem;
-  font-size: 2.8125rem;
-  margin: 0;
-  letter-spacing: -2%;
-  margin-bottom: 3.625rem;
+  margin: 0 0 3.625rem 0;
 }
 
 .box2--h1 {
   text-align: center;
   margin: 0;
-  padding-top: 3.6rem;
+  padding-top: 3.6rem
 }
 
 .main__p {
   width: 18rem;
-  margin: 0;
-  font-family: "Fira Sans";
-  margin-left: 5rem;
-  /* margin: 0 auto; */
-  font-size: 0.9rem;
-  /* font-size: 14px; */
+  margin: 0 0 0 5rem;
+  font-size: .9rem;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: 500
+}
+
+.box2--p,.box3__card h1,.box3__card p,.main__box4 p {
+  text-align: center;
+  line-height: 20px;
+  margin: 0
 }
 
 .box2--p {
   width: 27.625rem;
-  margin: 0;
-  text-align: center;
-  line-height: 20px;
-  margin-top: 0.25rem;
+  margin-top: .25rem
 }
 
 .card__p {
-  font-size: 0.6475rem;
-  /* margin-top: auto; */
+  font-size: .6475rem;
   line-height: 1.125rem;
   text-align: center;
   font-weight: 700;
   margin-bottom: 5rem;
-  /* height: 6.75rem; */
-  color: rgb(0 0 0 / 0.4);
+  color: rgb(0 0 0/.4)
 }
 
 .card__h3 {
   font-size: 1rem;
   padding-top: 13rem;
   margin: 0;
-  font-weight: 700;
+  font-weight: 700
 }
 
 .main__box1__left__button {
-  align-self: flex-start;
+  align-self: flex-start
 }
 
 .box3__card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  position: relative
 }
 
 .box3__card aside {
-  height: 100px;
-  width: 100px;
   font-weight: 900;
   font-size: 35px;
   line-height: 100%;
-  letter-spacing: -0.02rem;
-  color: rgba(0, 0, 0, 0.4);
+  letter-spacing: -.02rem;
+  color: rgba(0,0,0,.4);
   position: absolute;
   top: 0;
   left: 0;
-  padding: 2rem;
+  padding: 2rem
 }
 
 .box3__card h1 {
-  text-align: center;
-  margin: 0;
-  line-height: 100%;
+  line-height: 100%
 }
 
-.box3__card p {
-  font-family: "Fira Sans";
-  text-align: center;
-  color: rgba(0, 0, 0, 0.7);
+.box3__card p,.main__box4 p {
   font-weight: 500;
   font-size: 1.0625rem;
-  line-height: 20px;
-  margin: 0;
-  /* margin-bottom: 2rem; */
-}
-
-.main__box4 p {
-  font-family: "Fira Sans";
-  text-align: center;
-  color: rgba(0, 0, 0, 0.7);
-  font-weight: 500;
-  font-size: 1.0625rem;
-  line-height: 20px;
-  margin: 0;
+  color: rgba(0,0,0,.7)
 }
 
 .main__box4 a {
   text-decoration: none;
   padding: 1.5rem;
   z-index: 2;
-  width: 100%;
+  width: 100%
 }
 
 .main__box4 svg {
   transform: scale(1.3);
   position: absolute;
-  top: 5px;
-  left: 49%;
+  top: 5px
 }
 
-/* ----------- MAIN CONTACT ----------- */
 .main-contact {
-  grid-row: 7 / span 14;
-  grid-column: auto / span 6;
+  grid-row: 7/span 14;
   display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
+  width: 100%
 }
 
 .main__box1-contact {
@@ -483,11 +393,11 @@ main {
   background: #a9a19e;
   display: flex;
   max-height: 160.875rem;
-  padding: 6.5625rem;
+  padding: 6.5625rem
 }
 
-.main__box1-contact section {
-  width: 50%;
+.main__box1-contact form,.main__box1-contact section {
+  width: 50%
 }
 
 .email-box {
@@ -495,21 +405,27 @@ main {
   height: 40px;
   background: #fefefe;
   border-radius: 2px;
-  border: none;
-  outline: none;
-  padding: 0 0.5rem;
+  border: 0;
+  outline: 0;
+  padding: 0 .9rem;
+  margin-bottom: 1rem
+}
+
+.email-box__p,.main__box1-contact .main__h1 {
+  line-height: 100%;
+  letter-spacing: -.02em;
+  color: #fff
+}
+
+.email-box__p,.message-box {
+  font-style: normal;
+  font-size: 14px
 }
 
 .email-box__p {
-  font-family: "Fira Sans";
-  font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 100%;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  opacity: 0.7;
-  margin-bottom: 0.6rem;
+  opacity: .7;
+  margin-bottom: .6rem
 }
 
 .message-box {
@@ -517,49 +433,32 @@ main {
   height: 166px;
   background: #fefefe;
   border-radius: 2px;
-  border: none;
-
-  font-family: "Fira Sans";
-  font-style: normal;
+  border: 0;
   font-weight: 400;
-  font-size: 14px;
   line-height: 100%;
-  letter-spacing: -0.02em;
+  letter-spacing: -.02em;
   color: #000;
-
   resize: none;
   padding: 1rem;
-  outline: none;
+  outline: 0
 }
 
 .main-contact button {
-  margin: 2rem 3.8rem 0 auto;
-  padding: 0.9rem 2.1rem;
+  margin: 2rem 0 0 12.6rem;
+  padding: .9rem 2.1rem;
 }
 
 .main__box1-contact .main__h1 {
-  margin: 0;
-  margin-left: -2.35rem;
-  margin-top: 0.1rem;
-  font-family: "Frank Ruhl Libre";
-  font-style: normal;
+  margin: .1rem 0 0 -2.35rem;
   font-weight: 900;
-  font-size: 45px;
-  line-height: 100%;
-  letter-spacing: -0.02em;
-  color: #ffffff;
+  font-size: 45px
 }
 
 .main__box2-contact {
   width: 100%;
   height: 25.5rem;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
   position: relative;
-
-  background-image: url("../img/map-contact.png");
+  background-image: url(../img/map-contact.png)
 }
 
 .main__box2-contact article {
@@ -568,38 +467,29 @@ main {
   padding: 1rem;
   top: 2.8125rem;
   left: 5.375rem;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
   height: 206px;
-  width: 323px;
+  width: 323px
 }
 
-.main__box2-contact article h1,
-.main__box2-contact article p {
+.main__box2-contact article h1,.main__box2-contact article p {
   margin: 0;
-  color: white;
+  color: #fff
 }
 
 .main__box2-contact article p {
-  font-family: "Fira Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255,255,255,.8)
 }
 
 .main__box2-contact img {
-  margin-top: 1.8rem;
+  margin-top: 1.8rem
 }
 
-textarea::placeholder {
-  color: #000;
-  opacity: 0.7;  
-}
-
-/* ----------- FOOTER ----------- */
 footer {
   background: #777574;
-  grid-row: auto / span 5;
-  grid-column: auto / span 6;
+  grid-row: auto/span 5
 }
